@@ -28,11 +28,11 @@ public class Main {
 	private static void mostrarMapa(String matriz[][]) {
 		
 		for (int i = 0; i < matriz.length; i++) {
-			
+			System.out.print(i+" ");
 			for (int j = 0; j < matriz[i].length; j++) {
 				//matriz[i][j]="L";
 				
-				System.out.print(matriz[i][j] + "  ");
+				System.out.print("["+matriz[i][j]+"]" + "  ");
 			}
 			System.out.print("\n");
 		}
@@ -45,8 +45,7 @@ public class Main {
 			mostrarMapa(matriz);
 			int f = Integer.parseInt(JOptionPane.showInputDialog("Indique fila"));
 			int c= Integer.parseInt(JOptionPane.showInputDialog("Indique columna"));
-			//JOptionPane.showMessageDialog(null, f);
-			//JOptionPane.showMessageDialog(null, c);
+			
 			if ((f >=0 && f<10) && (c>=0 && c<10) ) {
 				if (matriz[f][c].equalsIgnoreCase("L")) {
 					matriz[f][c]= "X";
